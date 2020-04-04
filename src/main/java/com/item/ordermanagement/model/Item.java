@@ -9,11 +9,15 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ITEM")
-public class Item {
+public class Item  implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long item_id;
+	private Long item_id=0L;
 	
 	@Column
 	private String item_name;
