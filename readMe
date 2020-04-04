@@ -1,0 +1,47 @@
+Item table Structure :
+mysql> DESCRIBE item;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| item_id       | bigint       | NO   | PRI | NULL    | auto_increment |
+| item_desc     | varchar(255) | YES  |     | NULL    |                |
+| item_name     | varchar(255) | YES  |     | NULL    |                |
+| item_price    | double       | YES  |     | NULL    |                |
+| item_quantity | int          | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+
+
+mysql> DESCRIBE orders;
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| order_id     | int          | NO   | PRI | NULL    |       |
+| email_id     | varchar(255) | YES  |     | NULL    |       |
+| item_id      | bigint       | YES  |     | NULL    |       |
+| item_name    | varchar(255) | YES  |     | NULL    |       |
+| no_of_items  | int          | YES  |     | NULL    |       |
+| order_amount | double       | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> 
+
+API :
+http://localhost:8080/ ==> It will show all the below options :
+
+List of Items : ListOfItems
+
+Add new Item : Add Item 
+
+Place Order for item : Place Order 
+
+List of Orders : ListOfOrders
+
+
+http://localhost:8080/listofItems ==> Shows all the items available in backend.
+http://localhost:8080/edit ==> To add new item in database
+http://localhost:8080/placeorder ==> To place new order
+http://localhost:8080/orderList ==> Display the list of orders
+
